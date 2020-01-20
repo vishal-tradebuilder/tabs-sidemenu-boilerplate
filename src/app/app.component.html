@@ -1,0 +1,36 @@
+<ion-app>
+<ion-split-pane>
+  <ion-menu type="overlay">
+      <ion-header class="custom-header">
+        <ion-avatar>
+          <div class="sidemenu">
+            <img src="{{profilepic}}">
+          </div>
+        </ion-avatar>
+        <div class="sidemenu">
+          <h5 *ngIf="username"> {{username}} </h5>
+          <p class="pText text-muted"  *ngIf="email"> {{email}} </p>
+        </div>
+    </ion-header>
+    <ion-content>
+      <ion-list class="custom-content">
+        <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+          <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+            <ion-icon slot="start" [name]="p.icon"></ion-icon>
+            <ion-label>
+              {{p.title}}
+            </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-item *ngIf="signOut" (click)="logOut()">
+          <ion-icon slot="start" name="home"></ion-icon>
+          <ion-label>
+           signOut
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet main></ion-router-outlet>
+</ion-split-pane>
+</ion-app>

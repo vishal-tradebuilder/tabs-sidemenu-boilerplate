@@ -1,0 +1,24 @@
+<ion-content>
+  <div padding></div>
+  <form [formGroup]="loginForm" #f="ngForm">
+    <ion-card class="welcome-card padding-css">
+      <ion-img src="assets/images/dummy_logo.png" class="login-logo"></ion-img>
+      <ion-card-header>
+        <ion-card-subtitle>Sign In</ion-card-subtitle>
+        <ion-card-title>myHealthClub</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-input type="email" placeholder="Email Address" formControlName="email"></ion-input>
+        <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+      </ion-card-content>
+    </ion-card>
+    <div padding> 
+      <ion-button color="primary" expand="block" [disabled]="!loginForm.valid" (click)="login()">
+        Sign In
+      </ion-button>
+      <p class="copyright">
+        {{copyright}}
+      </p>
+    </div>
+  </form>
+</ion-content>

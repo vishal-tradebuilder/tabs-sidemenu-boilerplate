@@ -1,0 +1,42 @@
+form {
+    width: 90%;
+    margin: auto;
+}
+
+form ion-button {
+    margin-top: 20px;
+}
+ion-img {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 12px;
+}
+ion-img.custom-mg {
+    margin-top: 20px;
+    width: 220px;
+}
+.copyright{
+    font-size: 12px;
+    text-align: center;
+    color: #888888;
+}
+.terms{
+    text-align: center;
+}
+.login-logo{
+    height: auto !important;
+    width: 215px !important;
+    margin-top: 20px;
+}
+ion-card-header{
+    padding-top: 0px;
+}
+
+.padding-css{
+    margin-left: unset;
+    margin-right: unset;
+    -webkit-margin-start: 11px;
+    margin-inline-start: 0px;
+    -webkit-margin-end: 16px;
+    margin-inline-end: 0px;
+}
